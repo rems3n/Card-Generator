@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personal Prints | Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .noto-serif { font-family: 'Noto Serif', serif; }
+        .plus-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Ambient Shadow */
+        .ambient-shadow {
+            box-shadow: 0 20px 50px -12px rgba(28, 28, 24, 0.08);
+        }
+
+        /* Format Toggle Styles */
+        .format-toggle-btn.active {
+            background-color: #fcf9f3;
+            color: #1b3022;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1c1c18",
+              "on-error": "#ffffff",
+              "outline-variant": "#c3c8c1",
+              "tertiary": "#380000",
+              "on-primary-fixed": "#0b2013",
+              "surface-container": "#f0eee8",
+              "primary-fixed-dim": "#b4cdb8",
+              "tertiary-container": "#5f0000",
+              "on-secondary-container": "#745c00",
+              "on-tertiary-container": "#ff5945",
+              "on-primary": "#ffffff",
+              "primary-fixed": "#d0e9d4",
+              "inverse-on-surface": "#f3f0ea",
+              "surface-dim": "#dcdad4",
+              "primary-container": "#1b3022",
+              "secondary": "#735c00",
+              "inverse-primary": "#b4cdb8",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#e9c349",
+              "primary": "#061b0e",
+              "tertiary-fixed-dim": "#ffb4a8",
+              "surface-container-high": "#ebe8e2",
+              "tertiary-fixed": "#ffdad4",
+              "outline": "#737973",
+              "surface-variant": "#e5e2dc",
+              "error-container": "#ffdad6",
+              "secondary-container": "#fed65b",
+              "surface-container-highest": "#e5e2dc",
+              "secondary-fixed": "#ffe088",
+              "on-tertiary-fixed": "#410000",
+              "on-surface-variant": "#434843",
+              "on-primary-fixed-variant": "#364c3c",
+              "inverse-surface": "#31312d",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f6f3ed",
+              "on-primary-container": "#819986",
+              "on-background": "#1c1c18",
+              "background": "#fcf9f3",
+              "error": "#ba1a1a",
+              "surface-tint": "#4d6453",
+              "surface": "#fcf9f3",
+              "surface-bright": "#fcf9f3",
+              "on-tertiary": "#ffffff",
+              "on-secondary-fixed-variant": "#574500",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed": "#241a00",
+              "on-tertiary-fixed-variant": "#930100"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container/30">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-[#fcf9f3] dark:bg-stone-950/90 backdrop-blur-md flex justify-between items-center w-full px-8 py-4 sticky top-0 z-50 border-b border-stone-100 dark:border-stone-800">
+<div class="flex items-center gap-8">
+<span class="font-['Noto_Serif'] text-2xl font-bold text-[#1b3022] dark:text-emerald-400">Personal Prints</span>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-['Noto_Serif'] font-medium tracking-tight text-stone-500 dark:text-stone-400 hover:text-[#1b3022] transition-colors duration-300" href="#">Gallery</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight text-stone-500 dark:text-stone-400 hover:text-[#1b3022] transition-colors duration-300" href="#">Occasions</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight text-[#1b3022] border-b-2 border-[#1b3022] pb-1" href="#">My Projects</a>
+<a class="font-['Noto_Serif'] font-medium tracking-tight text-stone-500 dark:text-stone-400 hover:text-[#1b3022] transition-colors duration-300" href="#">Support</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#1b3022] text-2xl scale-98 active:opacity-80 transition-all" data-icon="shopping_bag">shopping_bag</button>
+<button class="material-symbols-outlined text-[#1b3022] text-2xl scale-98 active:opacity-80 transition-all" data-icon="person">person</button>
+</div>
+</header>
+<main class="flex min-h-[calc(100vh-80px-80px)] overflow-hidden">
+<!-- LEFT PANEL: Canvas Preview -->
+<section class="w-full md:w-[60%] bg-surface-container-low flex flex-col p-8 relative overflow-y-auto">
+<!-- Canvas Toolbar -->
+<div class="flex justify-between items-center mb-8 bg-surface-container-lowest p-2 rounded-lg ambient-shadow">
+<div class="flex gap-1 bg-surface-container p-1 rounded">
+<button class="px-6 py-1.5 text-xs font-bold tracking-widest uppercase bg-primary-container text-on-primary rounded-sm transition-all">FRONT</button>
+<button class="px-6 py-1.5 text-xs font-bold tracking-widest uppercase text-on-surface-variant hover:bg-surface-variant rounded-sm transition-all">BACK</button>
+</div>
+<div class="flex gap-4 items-center px-4">
+<button class="flex items-center gap-2 text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="title">title</span>
+                        Text
+                    </button>
+<button class="flex items-center gap-2 text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="image">image</span>
+                        Image
+                    </button>
+<div class="h-4 w-[1px] bg-outline-variant mx-2"></div>
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="zoom_in">zoom_in</button>
+<button class="material-symbols-outlined text-on-surface-variant" data-icon="zoom_out">zoom_out</button>
+</div>
+</div>
+<!-- Card Canvas -->
+<div class="flex-grow flex items-center justify-center p-4">
+<div class="relative w-full max-w-lg aspect-[5/7] bg-surface-container-lowest ambient-shadow transition-transform hover:scale-[1.01] duration-500">
+<img alt="Holiday watercolor painting" class="w-full h-full object-cover" data-alt="Watercolor holiday scene with snowy trees and a cozy cottage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4-dvuZpdmz8xpIwy7h79VnWIGAWriBoTBvFRCbCZC_Qy7fNue3ckwqWcunYw71a_KPtC9QleHIPM71ekOz-9F5asHU3ForHfabKHBLWlAtVB8pGNEhFINJc8rUIkOhfnXA1ZVaCUFIIUCeqqSvYtHBjhSVOskIpazJOZKhJ2oXB9Im9ELRHS6Z6NFxZtHKiEA6YribOOomp28w8d8ZwGw1QlVXWPgbpC_z30xXl66pCa0MMbItlI5S3zqO4isgV6hMd67ObPbESF1"/>
+<div class="absolute inset-0 flex flex-col items-center justify-end p-12 text-center pointer-events-none">
+<h2 class="font-headline text-3xl text-primary mb-2">Happy Holidays</h2>
+<p class="font-body text-sm tracking-[0.2em] uppercase text-primary/80">THE MILLER FAMILY</p>
+</div>
+<!-- Paper Texture Overlay -->
+<div class="absolute inset-0 pointer-events-none mix-blend-multiply opacity-20 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"></div>
+</div>
+</div>
+<!-- Side Navigation Indicator (Responsive) -->
+<div class="md:hidden mt-8">
+<p class="text-center text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-4">Tap to Edit Details</p>
+</div>
+</section>
+<!-- RIGHT PANEL: Sidebar Editor -->
+<aside class="hidden md:flex flex-col w-[40%] bg-[#fcf9f3] dark:bg-stone-900 border-l border-stone-100 dark:border-stone-800 overflow-y-auto pb-32">
+<div class="p-8 border-b border-surface-container">
+<div class="flex justify-between items-start mb-1">
+<h1 class="font-headline text-2xl font-bold text-[#1b3022]">Editor</h1>
+<button class="bg-[#1b3022] text-[#fcf9f3] px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-sm scale-98 active:opacity-80 transition-all">Save Draft</button>
+</div>
+<p class="text-stone-500 text-sm italic">Customizing Your Heirloom</p>
+</div>
+<!-- Editor Navigation Tabs -->
+<nav class="flex px-8 py-4 gap-4 bg-surface-container-low">
+<button class="flex flex-col items-center gap-1 p-2 bg-[#1b3022] text-[#fcf9f3] rounded-sm flex-1 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">AI Artist</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-stone-500 hover:bg-stone-100 rounded-sm flex-1 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="edit_note">edit_note</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Design</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-stone-500 hover:bg-stone-100 rounded-sm flex-1 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard_customize">dashboard_customize</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Layout</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-stone-500 hover:bg-stone-100 rounded-sm flex-1 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="title">title</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Text</span>
+</button>
+</nav>
+<div class="p-8 space-y-10">
+<!-- AI Artist Section -->
+<section>
+<label class="block text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-4">AI Artist Prompt</label>
+<textarea class="w-full h-24 bg-surface-container-lowest border-none p-4 text-sm focus:ring-1 focus:ring-secondary-container rounded-sm ambient-shadow resize-none" placeholder="Describe the mood or scene you want to create..."></textarea>
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div>
+<label class="block text-[10px] font-bold uppercase text-stone-400 mb-1">Art Style</label>
+<select class="w-full bg-surface-container-lowest border-none text-sm p-2 rounded-sm ambient-shadow cursor-pointer">
+<option>Watercolor</option>
+<option>Illustrated</option>
+<option>Photorealistic</option>
+<option>Abstract</option>
+</select>
+</div>
+<div class="flex items-end">
+<button class="w-full bg-secondary-container text-on-secondary-container py-2 text-sm font-bold uppercase tracking-widest rounded-sm hover:brightness-105 transition-all">Generate</button>
+</div>
+</div>
+</section>
+<!-- Your Designs Gallery -->
+<section>
+<div class="flex justify-between items-center mb-4">
+<label class="text-xs font-bold tracking-widest uppercase text-on-surface-variant">Generated Artwork</label>
+<span class="text-[10px] text-stone-400">4 items</span>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<div class="aspect-square bg-surface-container-lowest rounded-sm border-2 border-secondary overflow-hidden cursor-pointer ambient-shadow">
+<img alt="Generated art 1" class="w-full h-full object-cover" data-alt="Small thumbnail of holiday watercolor art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO5AdXJIMt_bd16SNj-1DqKX-8fBcHXGHXMMfx_IHeI8kcFyCAY9uGw-A-Mcnp8jUEXU2AULUI-WYw2pzJMoAQ9mDEOxrPxIjxi1dP9c6x_316IRcMltKjfY5juWL487qlEFQ0Asw6th9tl-vtemHw48JPPhS7Sv5yC7tOKeDHQFLNd8F8-aY12hMNb0udIlPAcQz7eeDpAHmDBpoi7t4L3ZF_WTrN0uYeUC17P4cfRReL4W384XSFln6-83ThdJBRh6ol7rq_1wOT"/>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-sm overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Generated art 2" class="w-full h-full object-cover" data-alt="Warm holiday interior scene painting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbZ620eG4k1XgKo_kD4HZjNvpWLszkPiXRDZxwkxw0oguh1BRdSoUBBDNAwQqryvBVqQ_u3vFdLKjOabsPiKJ8iTzZoUiXaitO1jWeFUhgaMmk-JyAxZ9jsCnxJ8F9sD9N9eeHhQVAOyNIWoYiLn9y6z6qm7z1Un3wn8GJWpC7ZObllnsGHVzJe8mLJ6SGi3JtYnpiaJPOFrWTDj6TQ6b40tl8JAkGUsuVN2x7ufdtigqXMN-s1ttAQqE8JAV3vOboUCLKCPS-PM-J"/>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-sm overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Generated art 3" class="w-full h-full object-cover" data-alt="Abstract festive patterns in green and gold" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQdNA9UO9IsifEBRJUFjpIZ8EATU7RRoGPpZw6VjAFcqYmo_UenSNlN32PWvksU2yg8Wa8LRDbjJJZ6vScXlSOqlpTeSMMnttltB_tjutX2ayDX-bnjquVYsDZ65K3XAxxH11HhgLSb1OO7TQ3ufto56NB9UygrncguyCihTEkZZbriMasEljmYTDLoLBEKvpnzSsXkJXhvwvAViBoiA0bDWMkWrew9PaU0M5YpyLMNCsIr_DN7nWWLttDoWTeAgDdfooOy_CscWsV"/>
+</div>
+<div class="aspect-square bg-surface-container-lowest rounded-sm border border-dashed border-stone-300 flex items-center justify-center cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-stone-400" data-icon="add">add</span>
+</div>
+</div>
+</section>
+<!-- Card Message -->
+<section class="space-y-4">
+<label class="block text-xs font-bold tracking-widest uppercase text-on-surface-variant">Personalize Content</label>
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-bold uppercase text-stone-400 mb-1">Greeting Text</p>
+<input class="w-full bg-surface-container-lowest border-none text-sm p-3 rounded-sm ambient-shadow" type="text" value="Happy Holidays"/>
+</div>
+<div>
+<p class="text-[10px] font-bold uppercase text-stone-400 mb-1">Sender Name</p>
+<input class="w-full bg-surface-container-lowest border-none text-sm p-3 rounded-sm ambient-shadow" type="text" value="THE MILLER FAMILY"/>
+</div>
+</div>
+</section>
+<!-- Change Template -->
+<section>
+<label class="block text-xs font-bold tracking-widest uppercase text-on-surface-variant mb-4">Switch Template</label>
+<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<div class="flex-shrink-0 w-20 aspect-[5/7] bg-surface-container-high rounded-sm ambient-shadow cursor-pointer hover:translate-y-[-2px] transition-transform overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="Minimalist holiday card layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtKBhALcEqvl1ccCBQgYq2XI1YGLDKjnTl2iHx2galhYpeIsui6Qrojjj2eTSb427hEtvfbKekAvgMUTMJa1CpPynMx-qgW35qkKNem8fmzL5UmRjMuDABBfBfSmKeEchYaMxZAKU78iD0_qcqdthgMGpBjZIDgOvviPekSo7h8XPuUA6iBf5RTTaM5GS_jPYyTcAa3LHF5-MqCfidRxe9-yaml_B08mGd7hsAooPRfzpH5F40VqzhxFhMMoBZIGTiUCETGSdtVTs4"/>
+</div>
+<div class="flex-shrink-0 w-20 aspect-[5/7] bg-surface-container-high rounded-sm ambient-shadow cursor-pointer hover:translate-y-[-2px] transition-transform overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="Classic serif typography card layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmp4zQAjappwMXf0nF-Bymc9uqAhsTTdMMQ4_d5gbeQaLNvkbf1a1mWQU4h6LnwueHn59HWkKrqbaGMz6OY3y1IKfEPyYQO4Xi0QHsnPkqX88JrHgOoEzpL4gYp854vRNjkxvcUuXMoZrEaqDoScWH_AhfDCO4UtV-Gk6P2wCdzn3FDAJt6toZuixQRXvMtKIosB4uaRbX1-ud35xtLDwa_fQCJ_nvcKh1Ic59JD1ISg8Q-Jtzl2_D69F4jPTll6cMlOGxnjVzxAaa"/>
+</div>
+<div class="flex-shrink-0 w-20 aspect-[5/7] bg-surface-container-high rounded-sm ambient-shadow cursor-pointer hover:translate-y-[-2px] transition-transform overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="Floral border card layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5nm0kVtXzjtJTycXRZAfErNvYwfVeYJnNsui6Ju78uENCkDEYtjWTp7wZd26GRjJwO1hlHypVaJCh8n1j0cF7NTVgdbjQ1xHZkWrv_Rhg8dPVxfjt2mXwRiOq-GW3VwZ9ROY4uxcDhBFjqyobSL2Yhqokbf8hSTg0kgqBcBPg0ucJsZ6qbo-2Rz5mFMCzcp8VkcJt_EPTN0RP2oq-fyFH9YxVmaPlPU4T-7OKJHroE1zohFff9kXQB8f9-ExEZiGmTGE_9EMArdmE"/>
+</div>
+</div>
+</section>
+</div>
+</aside>
+</main>
+<!-- BottomNavBar -->
+<footer class="bg-[#1b3022] dark:bg-stone-950 text-[#fcf9f3] dark:text-emerald-500 fixed bottom-0 left-0 w-full flex justify-between items-center px-12 py-4 h-20 z-50 no-border shadow-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-100/70" data-icon="payments">payments</span>
+<span class="font-['Noto_Serif'] text-lg font-bold text-emerald-100" id="price-display">$4.50 per card</span>
+</div>
+<!-- Format Selector Toggle -->
+<div class="flex bg-primary-container/50 p-1 rounded-md border border-white/10">
+<button class="format-toggle-btn active px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest rounded-sm transition-all" id="btn-print" onclick="updateFormat('print')">Physical Print</button>
+<button class="format-toggle-btn px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-emerald-100/60 hover:text-emerald-100 rounded-sm transition-all" id="btn-digital" onclick="updateFormat('digital')">Digital E-Card</button>
+</div>
+</div>
+<div class="flex gap-8 items-center">
+<div class="flex items-center gap-4 bg-primary/30 px-4 py-2 rounded-full border border-white/10" id="quantity-selector">
+<button class="material-symbols-outlined text-sm" data-icon="remove">remove</button>
+<span class="font-bold w-4 text-center">10</span>
+<button class="material-symbols-outlined text-sm" data-icon="add">add</button>
+</div>
+<button class="flex items-center gap-2 text-emerald-100/70 hover:bg-emerald-900 transition-all px-4 py-2 rounded-md">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-['Noto_Serif'] text-lg">Preview</span>
+</button>
+<button class="flex items-center gap-3 bg-secondary-container text-on-secondary-container px-8 py-3 rounded-md font-bold uppercase tracking-widest text-sm hover:brightness-110 active:scale-95 transition-all shadow-lg" id="add-to-cart-btn">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                Add Print to Cart
+            </button>
+</div>
+</footer>
+<script>
+        function updateFormat(format) {
+            const printBtn = document.getElementById('btn-print');
+            const digitalBtn = document.getElementById('btn-digital');
+            const priceDisplay = document.getElementById('price-display');
+            const addToCartBtn = document.getElementById('add-to-cart-btn');
+            const qtySelector = document.getElementById('quantity-selector');
+
+            if (format === 'digital') {
+                printBtn.classList.remove('active', 'bg-[#fcf9f3]', 'text-[#1b3022]');
+                printBtn.classList.add('text-emerald-100/60');
+                
+                digitalBtn.classList.add('active', 'bg-[#fcf9f3]', 'text-[#1b3022]');
+                digitalBtn.classList.remove('text-emerald-100/60');
+                
+                priceDisplay.textContent = '$1.50 per digital card';
+                addToCartBtn.innerHTML = '<span class="material-symbols-outlined">send</span> Add E-Card to Cart';
+                qtySelector.classList.add('opacity-50', 'pointer-events-none');
+            } else {
+                digitalBtn.classList.remove('active', 'bg-[#fcf9f3]', 'text-[#1b3022]');
+                digitalBtn.classList.add('text-emerald-100/60');
+                
+                printBtn.classList.add('active', 'bg-[#fcf9f3]', 'text-[#1b3022]');
+                printBtn.classList.remove('text-emerald-100/60');
+                
+                priceDisplay.textContent = '$4.50 per card';
+                addToCartBtn.innerHTML = '<span class="material-symbols-outlined">shopping_cart</span> Add Print to Cart';
+                qtySelector.classList.remove('opacity-50', 'pointer-events-none');
+            }
+        }
+    </script>
+</body></html>

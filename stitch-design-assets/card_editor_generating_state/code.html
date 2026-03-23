@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#1b3022",
+              "on-primary-fixed-variant": "#364c3c",
+              "surface-container-highest": "#e5e2dc",
+              "on-primary-container": "#819986",
+              "on-surface-variant": "#434843",
+              "on-surface": "#1c1c18",
+              "on-primary-fixed": "#0b2013",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "surface-tint": "#4d6453",
+              "on-background": "#1c1c18",
+              "surface-bright": "#fcf9f3",
+              "outline": "#737973",
+              "secondary-fixed-dim": "#e9c349",
+              "secondary": "#735c00",
+              "inverse-surface": "#31312d",
+              "secondary-fixed": "#ffe088",
+              "primary": "#061b0e",
+              "on-secondary-fixed": "#241a00",
+              "surface-variant": "#e5e2dc",
+              "inverse-on-surface": "#f3f0ea",
+              "surface-container-high": "#ebe8e2",
+              "surface": "#fcf9f3",
+              "primary-fixed-dim": "#b4cdb8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#b4cdb8",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#574500",
+              "tertiary-fixed-dim": "#ffb4a8",
+              "secondary-container": "#fed65b",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#930100",
+              "on-tertiary": "#ffffff",
+              "tertiary-container": "#5f0000",
+              "tertiary": "#380000",
+              "surface-container": "#f0eee8",
+              "surface-container-low": "#f6f3ed",
+              "on-tertiary-fixed": "#410000",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#ff5945",
+              "outline-variant": "#c3c8c1",
+              "tertiary-fixed": "#ffdad4",
+              "primary-fixed": "#d0e9d4",
+              "surface-dim": "#dcdad4",
+              "on-secondary-container": "#745c00",
+              "background": "#fcf9f3"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .shimmer {
+            background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.4) 50%, transparent 75%);
+            background-size: 200% 100%;
+            animation: loading 2s infinite ease-in-out;
+        }
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-hidden">
+<!-- TopNavBar -->
+<header class="bg-[#fcf9f3] dark:bg-stone-950 flex justify-between items-center w-full px-8 py-4 max-w-full fixed top-0 z-50">
+<div class="text-2xl font-serif italic text-[#1B3022] dark:text-[#fcf9f3]">Digital Atelier</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-stone-500 dark:text-stone-400 font-medium Plus Jakarta Sans tracking-wider uppercase hover:text-[#1B3022] dark:hover:text-[#fcf9f3] transition-colors duration-300" href="#">Gallery</a>
+<a class="text-[#1B3022] dark:text-[#fcf9f3] border-b-2 border-[#1B3022] dark:border-[#3e5c45] pb-1 Plus Jakarta Sans tracking-wider uppercase hover:text-[#1B3022] dark:hover:text-[#fcf9f3] transition-colors duration-300" href="#">Editor</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium Plus Jakarta Sans tracking-wider uppercase hover:text-[#1B3022] dark:hover:text-[#fcf9f3] transition-colors duration-300" href="#">My Designs</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium Plus Jakarta Sans tracking-wider uppercase hover:text-[#1B3022] dark:hover:text-[#fcf9f3] transition-colors duration-300" href="#">Orders</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="text-[#1B3022] dark:text-[#3e5c45] hover:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+<button class="text-[#1B3022] dark:text-[#3e5c45] hover:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- SideNavBar (Forest Green) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-20 pb-8 px-4 bg-[#fcf9f3] dark:bg-stone-950 border-r border-outline-variant/10 w-64 z-40">
+<div class="mb-10 px-4">
+<h2 class="text-lg font-serif text-[#1B3022]">Project: Heirloom Holiday</h2>
+<p class="text-xs text-stone-500 font-body">Last saved 2m ago</p>
+</div>
+<nav class="flex-1 space-y-2">
+<button class="w-full flex items-center gap-3 bg-[#1B3022] text-[#fcf9f3] rounded-sm px-4 py-3 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm font-medium">Layout</span>
+</button>
+<button class="w-full flex items-center gap-3 text-[#1B3022] dark:text-stone-400 px-4 py-3 hover:bg-[#f2eee3] dark:hover:bg-stone-800 transition-all">
+<span class="material-symbols-outlined" data-icon="title">title</span>
+<span class="text-sm font-medium">Typography</span>
+</button>
+<button class="w-full flex items-center gap-3 text-[#1B3022] dark:text-stone-400 px-4 py-3 hover:bg-[#f2eee3] dark:hover:bg-stone-800 transition-all">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-sm font-medium">Imagery</span>
+</button>
+<button class="w-full flex items-center gap-3 text-[#1B3022] dark:text-stone-400 px-4 py-3 hover:bg-[#f2eee3] dark:hover:bg-stone-800 transition-all">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="text-sm font-medium">Review</span>
+</button>
+</nav>
+<div class="mt-auto px-4">
+<button class="w-full bg-secondary text-on-secondary py-3 text-xs font-bold tracking-widest uppercase rounded-sm hover:opacity-90 transition-opacity">
+                Export Design
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 pt-20 pb-24 min-h-screen flex">
+<!-- LEFT PANEL: Card Preview (60%) -->
+<section class="w-[60%] p-12 flex flex-col items-center justify-center bg-surface-container-low">
+<div class="relative w-full max-w-xl aspect-[5/7] bg-surface-container-lowest shadow-2xl overflow-hidden flex flex-col p-12">
+<!-- Card Inner Decorative Frame (Tonal Shift) -->
+<div class="absolute inset-4 border border-outline-variant/20 pointer-events-none"></div>
+<!-- Shimmer Placeholder for Main Artwork -->
+<div class="flex-1 w-full bg-surface-container shimmer relative">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-outline-variant/40 text-6xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+<!-- Text Placeholders -->
+<div class="mt-8 space-y-4">
+<div class="h-8 w-2/3 bg-surface-container shimmer"></div>
+<div class="h-4 w-full bg-surface-container shimmer"></div>
+<div class="h-4 w-5/6 bg-surface-container shimmer"></div>
+</div>
+<!-- Descriptive Alt for image simulation -->
+<div class="hidden" data-alt="A premium vertical greeting card with a shimmering blank rectangle where AI art is being generated."></div>
+</div>
+<p class="mt-8 font-label text-xs uppercase tracking-[0.2em] text-outline italic">Front Preview: Cotton Paper 300gsm</p>
+</section>
+<!-- RIGHT PANEL: AI Generation Section (40%) -->
+<section class="w-[40%] p-12 bg-surface border-l border-surface-container-high">
+<div class="max-w-md mx-auto h-full flex flex-col">
+<div class="mb-12">
+<span class="font-label text-xs uppercase tracking-widest text-secondary font-bold">AI Studio</span>
+<h1 class="font-headline text-4xl text-primary mt-2">Crafting Elegance</h1>
+</div>
+<!-- Generation Status Card -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col gap-8 relative overflow-hidden">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed animate-pulse" data-icon="magic_button">magic_button</span>
+</div>
+<div>
+<h3 class="font-bold text-on-surface">Artisan Engine</h3>
+<p class="text-sm text-on-surface-variant">Model: Vintage Botanical v4</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between text-xs font-bold tracking-tighter uppercase text-primary">
+<span>Creating your custom artwork...</span>
+<span>64%</span>
+</div>
+<!-- Custom Shimmer Progress Bar -->
+<div class="h-[2px] w-full bg-surface-container-highest relative overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-2/3 bg-primary-container transition-all duration-700"></div>
+<div class="absolute top-0 left-0 h-full w-full shimmer"></div>
+</div>
+</div>
+<!-- Detail Skeleton Loader -->
+<div class="space-y-3">
+<div class="h-4 w-3/4 bg-surface-container-high shimmer"></div>
+<div class="h-4 w-1/2 bg-surface-container-high shimmer"></div>
+<div class="h-4 w-2/3 bg-surface-container-high shimmer"></div>
+</div>
+<button class="mt-4 text-xs font-bold text-error uppercase tracking-widest self-start hover:underline transition-all">
+                        Cancel Generation
+                    </button>
+</div>
+<div class="mt-12 space-y-8">
+<div class="p-6 bg-surface-container-lowest border-l-4 border-secondary">
+<h4 class="font-serif text-sm italic text-primary">Curator's Note</h4>
+<p class="text-sm text-on-surface-variant mt-2 leading-relaxed">
+                            Our AI is currently blending deep forest hues with golden foil patterns to match your "Heirloom" theme preferences.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-4 opacity-50">
+<div class="aspect-square bg-surface-container shimmer rounded-sm"></div>
+<div class="aspect-square bg-surface-container shimmer rounded-sm"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Bar (Fixed) -->
+<footer class="fixed bottom-0 left-0 w-full bg-[#fcf9f3] dark:bg-stone-950 flex justify-between items-center px-12 py-4 z-50 border-t border-surface-container-high">
+<!-- Price/Quantity Info (Left offset by sidebar) -->
+<div class="ml-64 flex items-center gap-12">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline block mb-1">Total Est.</span>
+<span class="font-headline text-2xl text-primary">$4.50 <span class="text-sm font-normal text-outline">/ unit</span></span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Quantity</span>
+<div class="flex items-center border border-outline-variant rounded-sm overflow-hidden bg-surface">
+<button class="px-3 py-1 hover:bg-surface-container transition-colors text-primary">-</button>
+<span class="px-4 py-1 font-headline border-x border-outline-variant">25</span>
+<button class="px-3 py-1 hover:bg-surface-container transition-colors text-primary">+</button>
+</div>
+</div>
+</div>
+<!-- Add to Cart -->
+<div class="flex items-center gap-6">
+<button class="text-primary font-label text-xs uppercase tracking-widest font-bold hover:text-secondary-fixed-dim transition-colors">
+                Save Draft
+            </button>
+<button class="bg-primary-container text-white px-10 py-4 font-label text-xs uppercase tracking-[0.2em] font-bold shadow-lg hover:bg-primary transition-all active:scale-95 disabled:opacity-50" disabled="">
+                Add to Cart
+            </button>
+</div>
+</footer>
+</body></html>

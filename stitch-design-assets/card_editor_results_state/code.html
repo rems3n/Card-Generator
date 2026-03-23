@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#1b3022",
+              "on-primary-fixed-variant": "#364c3c",
+              "surface-container-highest": "#e5e2dc",
+              "on-primary-container": "#819986",
+              "on-surface-variant": "#434843",
+              "on-surface": "#1c1c18",
+              "on-primary-fixed": "#0b2013",
+              "on-error-container": "#93000a",
+              "on-error": "#ffffff",
+              "surface-tint": "#4d6453",
+              "on-background": "#1c1c18",
+              "surface-bright": "#fcf9f3",
+              "outline": "#737973",
+              "secondary-fixed-dim": "#e9c349",
+              "secondary": "#735c00",
+              "inverse-surface": "#31312d",
+              "secondary-fixed": "#ffe088",
+              "primary": "#061b0e",
+              "on-secondary-fixed": "#241a00",
+              "surface-variant": "#e5e2dc",
+              "inverse-on-surface": "#f3f0ea",
+              "surface-container-high": "#ebe8e2",
+              "surface": "#fcf9f3",
+              "primary-fixed-dim": "#b4cdb8",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#b4cdb8",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#574500",
+              "tertiary-fixed-dim": "#ffb4a8",
+              "secondary-container": "#fed65b",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#930100",
+              "on-tertiary": "#ffffff",
+              "tertiary-container": "#5f0000",
+              "tertiary": "#380000",
+              "surface-container": "#f0eee8",
+              "surface-container-low": "#f6f3ed",
+              "on-tertiary-fixed": "#410000",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-container": "#ff5945",
+              "outline-variant": "#c3c8c1",
+              "tertiary-fixed": "#ffdad4",
+              "primary-fixed": "#d0e9d4",
+              "surface-dim": "#dcdad4",
+              "on-secondary-container": "#745c00",
+              "background": "#fcf9f3"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #fcf9f3;
+      }
+      .font-serif {
+        font-family: 'Noto Serif', serif;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface overflow-hidden">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#fcf9f3] dark:bg-stone-950 flex justify-between items-center w-full px-8 py-4 max-w-full bg-[#f2eee3] dark:bg-stone-900 tonal shift instead of borders">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-serif italic text-[#1B3022] dark:text-[#fcf9f3]">Digital Atelier</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#1B3022] dark:hover:text-[#fcf9f3] transition-colors duration-300 Labels: Plus Jakarta Sans tracking-wider uppercase" href="#">Gallery</a>
+<a class="text-[#1B3022] dark:text-[#fcf9f3] border-b-2 border-[#1B3022] dark:border-[#3e5c45] pb-1 Labels: Plus Jakarta Sans tracking-wider uppercase" href="#">Editor</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#1B3022] dark:hover:text-[#fcf9f3] transition-colors duration-300 Labels: Plus Jakarta Sans tracking-wider uppercase" href="#">My Designs</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#1B3022] dark:hover:text-[#fcf9f3] transition-colors duration-300 Labels: Plus Jakarta Sans tracking-wider uppercase" href="#">Orders</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#1B3022] hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+<button class="p-2 text-[#1B3022] hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Editor Layout -->
+<main class="flex h-screen pt-[72px] pb-[80px]">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col pt-20 pb-8 px-4 bg-[#fcf9f3] dark:bg-stone-950 w-64 bg-[#f2eee3] dark:bg-stone-900 tonal shift">
+<div class="mb-8 px-4">
+<h2 class="text-lg font-serif text-[#1B3022] Headlines: Noto Serif.">Project: Heirloom Holiday</h2>
+<p class="text-xs text-on-surface-variant font-medium body: Plus Jakarta Sans.">Last saved 2m ago</p>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<button class="flex items-center gap-3 text-[#1B3022] dark:text-stone-400 px-4 py-3 hover:bg-[#f2eee3] dark:hover:bg-stone-800 transition-all">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Layout</span>
+</button>
+<button class="flex items-center gap-3 text-[#1B3022] dark:text-stone-400 px-4 py-3 hover:bg-[#f2eee3] dark:hover:bg-stone-800 transition-all">
+<span class="material-symbols-outlined" data-icon="title">title</span>
+<span class="font-medium">Typography</span>
+</button>
+<button class="flex items-center gap-3 bg-[#1B3022] text-[#fcf9f3] rounded-sm px-4 py-3 scale 0.98x transition-all">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-medium">Imagery</span>
+</button>
+<button class="flex items-center gap-3 text-[#1B3022] dark:text-stone-400 px-4 py-3 hover:bg-[#f2eee3] dark:hover:bg-stone-800 transition-all">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+<span class="font-medium">Review</span>
+</button>
+</nav>
+<div class="px-4">
+<button class="w-full bg-secondary-container text-on-secondary-container font-semibold py-3 rounded-sm hover:opacity-90 transition-all active:scale-[0.98]">
+                    Export Design
+                </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<div class="flex w-full ml-64">
+<!-- Left Panel: Card Preview (60%) -->
+<section class="w-3/5 bg-surface-container-low flex items-center justify-center p-12">
+<div class="relative w-full max-w-xl aspect-[5/7] bg-surface-container-lowest shadow-2xl flex flex-col items-center justify-center p-1">
+<div class="w-full h-full bg-surface border-[12px] border-surface-container-lowest overflow-hidden flex flex-col">
+<!-- Card Content Preview -->
+<div class="relative flex-grow">
+<img alt="Holiday Pine Illustration" class="w-full h-full object-cover" data-alt="Modern watercolor painting of a winter pine branch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbPy7FtoYj9iYfuTS5D-QwjLKxTRfpL0b8VvlDWdunGle7ZQ8CaGK9zgIz23MZxsgvTI13QJdEytnRpZxuqXVmFWcvOF_J2I4vXgtG8dfcUjg03tmlkzHJUEFrMuh1zL7EA9kldyKwbGuX4aKVAJy1ugV7x-I-oYFMU1I75IlY-bIywohlGa49HcxSvPZWcseJklfhqur4u9xK8gikfto9QTY3VLVht-D6N3PY6ES42GjxA8lZQll59Yn_3_eTsR5pRAUiwtqWY_it"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<div class="p-8 text-center bg-surface">
+<h3 class="font-serif text-3xl text-primary-container mb-2 italic">Season's Greetings</h3>
+<p class="font-body text-sm tracking-widest uppercase text-on-surface-variant">The Henderson Family</p>
+</div>
+</div>
+<!-- Tactile Paper Texture Overlay (CSS Pattern) -->
+<div class="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]"></div>
+</div>
+</section>
+<!-- Right Panel: AI Generation (40%) -->
+<section class="w-2/5 bg-surface p-10 flex flex-col border-l border-outline-variant/15 overflow-y-auto">
+<div class="mb-10">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface-variant block mb-2">Creative Assistant</span>
+<h1 class="font-serif text-4xl text-primary-container leading-tight">Generate Artwork</h1>
+</div>
+<!-- Bento Grid for Results -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<!-- Option 1 -->
+<div class="group relative aspect-square bg-surface-container-high overflow-hidden cursor-pointer">
+<img alt="Option 1" class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500" data-alt="Minimalist gold foil star patterns on dark green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE_tcshihmcnAxDNYM5K4kGwZHrtA1jfIWkRjYNZ3ahd94bYDxwlY6SwUuPCDoAs7iM1UFLT9cbQHEfenCxp2Me1jc5x7jUjqDHKTkrywkrqr6VQI4gNEN9q450bLAT8K3sFWblc6juY6FoGo2qrrPPxqV6WI2DMPuSwX3CYrIWTKGSNAN05slThwUHP8hOxcqxI5n9JFYM3GbZ8hG0Mo-A6dKtRAXCsJ4U47r1Ctsctakpmb6Og3P5nr5IZp1glIWRGwkW6Bf1QL3"/>
+<div class="absolute inset-0 bg-primary-container/0 group-hover:bg-primary-container/20 transition-all duration-300"></div>
+</div>
+<!-- Option 2 (Hover State) -->
+<div class="group relative aspect-square bg-surface-container-high overflow-hidden ring-2 ring-secondary">
+<img alt="Option 2" class="w-full h-full object-cover" data-alt="Modern watercolor painting of a winter pine branch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm72ykAB4dKUREnjhkjKh6Xl3Y8C8GK59GGtxBtPe8TFOybisL1HFlfE8s2TXD5oybFXCmEspKGqChffnlhk3-kvbbZKfn7pUvfWX_sHjvbMGcJkfHc6SCGRzdv0y5X6nzo2rBCdS5rgCLeKvssQolAu8smtIoU3vcu09_gs0Jx1mlo8eYoPb1-47weOxHzCxp6GCNhw9T15UJshkGBKJhqHNeVRpg_7xIzUsFNmme98f_f_vZkBfNH-_MRKNAZoYG0dJZFhoZmBFe"/>
+<div class="absolute inset-0 bg-primary-container/40 flex items-center justify-center p-4 backdrop-blur-[2px]">
+<button class="bg-secondary-container text-on-secondary-container px-4 py-2 text-xs font-bold tracking-wider uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+                                Use This
+                            </button>
+</div>
+</div>
+<!-- Option 3 -->
+<div class="group relative aspect-square bg-surface-container-high overflow-hidden cursor-pointer">
+<img alt="Option 3" class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500" data-alt="Vintage botanical illustration of red winter berries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9SXmhJzrvk4WxWR_JuBopJdzvIpuHrq-2d9BfrWuq4-U8dx1f1EEexSif7Oyuw3YhOZTZM9QfAGARIRoJdmMhE-b5KWJzwDkBXhzhXysV6ajiWuIMjsVenoh5SJvn1l1m-vF9dXgOK8OXnv2gDQOC1HMU5IHFC2RbIm2VqHk86druSQlYyQQ4iiw2B_gLeJOY4FPKiHZYqu2MoHBVORVEN28k8TwydIYCp5r4GREZQHVeuPkaBm0FgFNbSq-Ynhc4JZVUD6NAg_Hy"/>
+<div class="absolute inset-0 bg-primary-container/0 group-hover:bg-primary-container/20 transition-all duration-300"></div>
+</div>
+<!-- Option 4 -->
+<div class="group relative aspect-square bg-surface-container-high overflow-hidden cursor-pointer">
+<img alt="Option 4" class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500" data-alt="Abstract soft focus holiday lights and bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr94QbaOqk1K7kdy-GTZ5XU_fv9i03cUKro-6I0gUeJsuu-zyCpUu8aBTdqE-765d9jeZYa2t_7Maa4YKtbHOYZFg8uxGEp4Pd0uQP4rY-JkSofiU8LEne1bRWTU-rp9VGwawZ4YY1kHgXqOQAsiLDcaFKBShokBmApf5qfWo8vv84lyqGZkF_eXKFrg4NfHf5RYI87qAklVcYlMZCD32gTEceDY6WEGBhmx4P0JNNqrHQEX4vP5BcCHJN1KRjxLscnKhMMGUQSJMO"/>
+<div class="absolute inset-0 bg-primary-container/0 group-hover:bg-primary-container/20 transition-all duration-300"></div>
+</div>
+</div>
+<div class="flex flex-col gap-6 items-center">
+<button class="w-full bg-primary-container text-on-primary py-4 px-6 flex items-center justify-center gap-3 hover:bg-primary transition-all group">
+<span class="material-symbols-outlined group-hover:rotate-180 transition-transform duration-700" data-icon="sync">sync</span>
+<span class="font-bold tracking-widest uppercase text-sm">Regenerate</span>
+</button>
+<a class="text-primary-container font-medium text-sm border-b border-primary-container/30 pb-0.5 hover:border-primary-container transition-all" href="#">
+                        Refine prompt and settings
+                    </a>
+</div>
+<div class="mt-auto pt-10 border-t border-outline-variant/15">
+<div class="bg-surface-container-low p-6 rounded-lg">
+<h4 class="font-serif italic text-primary-container text-lg mb-2">Artist's Note</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            These generations are inspired by <span class="text-secondary font-semibold italic">"Nordic Winter Shadows"</span> using a soft watercolor medium on textured cotton paper.
+                        </p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Bar -->
+<footer class="fixed bottom-0 left-0 right-0 h-20 bg-surface border-t border-outline-variant/15 flex items-center justify-between px-10 z-50">
+<div class="flex items-center gap-12">
+<div class="flex flex-col">
+<span class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Unit Price</span>
+<span class="font-serif text-xl font-bold text-primary-container">$3.50 <span class="text-sm font-normal text-on-surface-variant">/ card</span></span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col">
+<span class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant mb-1">Quantity</span>
+<div class="flex items-center bg-surface-container border border-outline-variant/30 rounded-full px-3 py-1">
+<button class="text-primary-container p-1"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="px-4 font-bold text-sm">25</span>
+<button class="text-primary-container p-1"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<div class="text-right">
+<span class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Subtotal</span>
+<p class="font-serif text-2xl font-bold text-primary-container">$87.50</p>
+</div>
+<button class="bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-white px-10 py-4 font-bold tracking-[0.15em] uppercase text-sm transition-all flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                Add to Cart
+            </button>
+</div>
+</footer>
+</body></html>

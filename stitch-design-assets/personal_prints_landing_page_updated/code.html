@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personal Prints | The Modern Heirloom</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#410000",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#364c3c",
+                        "surface-container-high": "#ebe8e2",
+                        "inverse-primary": "#b4cdb8",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#745c00",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary": "#380000",
+                        "tertiary-container": "#5f0000",
+                        "surface": "#fcf9f3",
+                        "surface-container-low": "#f6f3ed",
+                        "secondary-fixed": "#ffe088",
+                        "outline-variant": "#c3c8c1",
+                        "surface-tint": "#4d6453",
+                        "inverse-surface": "#31312d",
+                        "surface-dim": "#dcdad4",
+                        "on-primary-container": "#819986",
+                        "secondary": "#735c00",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f3",
+                        "primary-container": "#1b3022",
+                        "primary-fixed": "#d0e9d4",
+                        "primary-fixed-dim": "#b4cdb8",
+                        "surface-variant": "#e5e2dc",
+                        "on-tertiary-container": "#ff5945",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#930100",
+                        "on-secondary-fixed-variant": "#574500",
+                        "background": "#fcf9f3",
+                        "tertiary-fixed": "#ffdad4",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-background": "#1c1c18",
+                        "secondary-container": "#fed65b",
+                        "inverse-on-surface": "#f3f0ea",
+                        "primary": "#061b0e",
+                        "surface-container-highest": "#e5e2dc",
+                        "on-primary-fixed": "#0b2013",
+                        "surface-container": "#f0eee8",
+                        "on-surface": "#1c1c18",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "on-surface-variant": "#434843",
+                        "outline": "#737973",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 40px 80px -20px rgba(28, 28, 24, 0.06);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1b3022 0%, #061b0e 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f3]/80 dark:bg-[#1b3022]/80 backdrop-blur-lg shadow-sm dark:shadow-none transition-colors duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-serif font-bold text-[#1b3022] dark:text-[#fcf9f3]">Personal Prints</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-gap-8 gap-12">
+<a class="text-[#1b3022] dark:text-[#fcf9f3] font-bold border-b-2 border-[#d4af37] text-sm tracking-wide" href="#">How it Works</a>
+<a class="text-[#1b3022]/70 dark:text-[#fcf9f3]/70 font-medium hover:text-[#1b3022] transition-all text-sm tracking-wide" href="#">Pricing</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-6">
+<button class="text-sm font-label uppercase tracking-widest text-[#1b3022]/70 hover:text-[#1b3022]">Sign In</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 text-xs font-label uppercase tracking-[0.2em] hover:opacity-90 transition-all active:scale-95 duration-150">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden px-8">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="z-10 space-y-8">
+<span class="inline-block font-label text-[10px] uppercase tracking-[0.4em] text-secondary font-bold">The Digital Atelier</span>
+<h1 class="font-headline text-6xl md:text-8xl text-primary leading-[1.1] tracking-tight">
+                        Send Cards <br/> <span class="italic font-normal">They'll Actually Keep</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+                        AI-generated custom art. Choose a template, add your own AI image, and we'll take care of the rest. High-cotton paper meets high-tech vision.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 font-label text-xs uppercase tracking-[0.2em] font-bold shadow-sm hover:brightness-105 transition-all">
+                            Design Your Card
+                        </button>
+<button class="border border-outline/20 px-10 py-4 font-label text-xs uppercase tracking-[0.2em] hover:bg-surface-container-low transition-all">
+                            See Examples
+                        </button>
+</div>
+</div>
+<div class="relative">
+<!-- Gallery Stack -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low p-12 overflow-hidden">
+<div class="absolute top-10 right-0 w-3/4 aspect-[3/4] bg-surface-container-lowest editorial-shadow -rotate-6 transform translate-x-12">
+<img alt="Minimalist holiday card design with forest theme" class="w-full h-full object-cover p-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeqAPXJUZVe8rjorXLXo4RUbCibOR_xmU6VTRHhcOgdvbEGxIaGH9qLsrqf1Z1G69D2Yo3ZrFYKuQC3bOZAAjr6TcQYhjfgm_au8RHRsH_gy7nYJgqmjatgHt8_6X0-E28oSR_-PG-fUz4hcGz9n4_N7t6DSai8NUqjmkyGZhRyD2bdLsTLdbqBzyJ_QdxsMQCG8YbYzFtuzZKWR8KK6S9_aJhQKFy4z3d31H-0-JyDVsKyXUbfCffcidHVbQ6H8UiI9uQhqMXCiQ7"/>
+</div>
+<div class="absolute bottom-10 left-0 w-3/4 aspect-[3/4] bg-surface-container-lowest editorial-shadow rotate-3 transform -translate-x-8">
+<img alt="Elegant gold foil holiday card mockup" class="w-full h-full object-cover p-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvnKqP7NajGYGzpyuUXBctOP-3cdYbZ9XxZAzBSo00qWwDCHf2iJn_18mT--Qh0o1R6jUfMrQhyWeQsZ4aPiSRiM5S97EN8URNd7QCtC5qe12Emsi6aXwGWa92QQxPDiCAS4OiNKhC9kZJ03g1rEbQASg4-DJ5hwdxdayUVr5W8pzIfzf4pohAazXdhM_0-74tKNqgjk6FZmQ8IcLs1ZmFuVTZPB_R8NuTbYjTd9O4ZFRvcV4HmlHNq62XtkiSvTNk3tIMTRI8xgWo"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: How the Magic Works -->
+<section class="py-24 bg-[#F5F0E8]">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20 space-y-4">
+<h2 class="font-headline text-4xl md:text-5xl italic text-primary">From Your Idea to a Card Worth Keeping</h2>
+<p class="text-on-surface-variant text-lg font-body">Just describe what you want — or upload a photo. Our AI does the rest.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 mb-16">
+<!-- Comparison Card 1 -->
+<div class="flex flex-col">
+<div class="flex h-64 border border-outline/10 shadow-sm overflow-hidden">
+<div class="w-1/2 bg-surface-container-highest p-6 flex flex-col justify-center items-center text-center gap-4 border-r border-outline/10">
+<span class="material-symbols-outlined text-outline text-3xl">edit</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-outline">Your Prompt</span>
+<p class="text-xs italic text-on-surface-variant leading-relaxed">"A snowy pine forest at dusk, watercolor style, warm golden light between the trees"</p>
+</div>
+<div class="w-1/2 bg-white relative">
+<img alt="Watercolor Forest Illustration" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxYaURFe3QAL0SNFarjYjNolpSJHfFqwcWB6hTI9LWF4A7OAljZlYpxiwgv6_W1F-GHj-SXgtcXZtY0DNOj1LzAan1JT9K7e4sdq90aQAg8eTSSJ0G6OZUR3xoyga0068gaSETax_M_HvyXOJhkJXUE-cZ2Y5DbpmrRJiow0M9AcaTI3b5fcw8uKN4WIx4gLiJfOdxqp4u7AuDXMaaVOJMknpNZqeG5EBLtAOSIfis3K8QXcHtk-EmDzgmzxj6xBSZSF4mBMmmCGma"/>
+<div class="absolute top-4 right-4 bg-white/90 p-1.5 shadow-sm rounded-full">
+<span class="material-symbols-outlined text-secondary text-base">auto_awesome</span>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="text-[10px] font-label uppercase tracking-widest text-white drop-shadow-md">Your Card Art</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Comparison Card 2 -->
+<div class="flex flex-col">
+<div class="flex h-64 border border-outline/10 shadow-sm overflow-hidden">
+<div class="w-1/2 bg-surface-container-highest p-4 flex flex-col justify-center items-center text-center gap-4 border-r border-outline/10">
+<span class="material-symbols-outlined text-outline text-3xl">add_a_photo</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-outline">Your Photo</span>
+<div class="w-20 h-20 overflow-hidden rounded-md rotate-[-3deg] border-2 border-white shadow-sm">
+<img alt="Original Dog Photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNcqmMGJLhi6Ik1tgFXPx96wSWOfwSwKOP1ZxEhDergOvfZNaie_8jbL81BmfMCi3ogpwRmuzefYid3FoVkGs7gobDJZLvXyB34vkPelrHpcyPXdIQiv6nsz28dJRkP4MgmtsAtaaGc5_GKwAPXxXmvBfRjpbvResczRVZqk8VvbqIhjaDzVll-vg7m9QgK1m_yVZs184j6oLKzxKWo0l539MgeNRjnwW8WzpYO64MJwxM0if1Glzk7hy9X7E5W9gaibEZf2t-72hV"/>
+</div>
+</div>
+<div class="w-1/2 bg-white relative">
+<img alt="Painterly Dog Illustration" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdRdJVEJ3UJShDq_kGwJMj8aTFJtlB1TWnKDxsJ3bBJ63yYix1baR4WRGpaMtQanU1KvXw0TJSY8v5Hqc3mfF84Wt_IJVtt0Vb39iLsmmR2wAAANEdo8f0OskJ-p6R5DcVnSk7pfr9GIDbeTgsvfaw6TeKSgY8Gw45nT3aWcJH1n-7pyixe04uBNyZ4D5d9mbLAxE9Q8lijRjU_o2U4YNstR-bQ8eFqBhbG8amBk_dJ7edJQzilr7mH9QlPZX1-07wFn649b-KLdwx"/>
+<div class="absolute top-4 right-4 bg-white/90 p-1.5 shadow-sm rounded-full">
+<span class="material-symbols-outlined text-secondary text-base">auto_awesome</span>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="text-[10px] font-label uppercase tracking-widest text-white drop-shadow-md">Your Card Art</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Comparison Card 3 -->
+<div class="flex flex-col">
+<div class="flex h-64 border border-outline/10 shadow-sm overflow-hidden">
+<div class="w-1/2 bg-surface-container-highest p-6 flex flex-col justify-center items-center text-center gap-4 border-r border-outline/10">
+<span class="material-symbols-outlined text-outline text-3xl">stylus_note</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-outline">Your Prompt</span>
+<p class="text-xs italic text-on-surface-variant leading-relaxed">"Cozy holiday scene with a fireplace, felt stockings, and a tabby cat sleeping"</p>
+</div>
+<div class="w-1/2 bg-white relative">
+<img alt="Cozy Fireplace Illustration" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtsWQW2UyLOpAJhPL0r9KNGedy6OH6oxiJnRGptOBxoj4eMLS8y8BH1OWN_FM_0wrBIn2Ty8asOBMZaeMicvE7AUzd0xh13lp2NuQyWVK-v_evTXXfirzRb9eUrItI9bINYqzpePheAisbE-uVz1VGRRXHL6OvqhvwDRv8Z2YhRFauz_qQD65RnxQOn7edMWBcqU_p-EJbkqgc2H-BDKYesQUNCvAl-lZz5UAF_e1nF_4s8jouPdShvTX09aOyWGs7NFE4g0VrPKlA"/>
+<div class="absolute top-4 right-4 bg-white/90 p-1.5 shadow-sm rounded-full">
+<span class="material-symbols-outlined text-secondary text-base">auto_awesome</span>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="text-[10px] font-label uppercase tracking-widest text-white drop-shadow-md">Your Card Art</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center space-y-10">
+<p class="italic text-on-surface/60 text-sm">Each image is uniquely generated for your card. No two are alike.</p>
+<button class="bg-[#C9A84C] text-white px-12 py-4 font-label text-xs uppercase tracking-[0.3em] font-bold shadow-lg hover:brightness-105 transition-all">
+                        Try It Free
+                    </button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Printed on Paper That Feels Like a Gift -->
+<section class="py-24 bg-[#1B3A2D] text-[#F5F0E8]">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 space-y-4">
+<span class="font-label text-[10px] uppercase tracking-[0.5em] text-[#C9A84C] font-bold">THE CRAFT</span>
+<h2 class="font-headline text-4xl md:text-5xl">High-Cotton Paper. Museum-Grade Ink.</h2>
+<p class="text-[#F5F0E8]/70 max-w-2xl mx-auto leading-relaxed">
+                        We partner with a premium global printing network to deliver archival-quality prints. Every card is produced on 200gsm heavy cotton-blend cardstock, ensuring your holiday message carries the weight it deserves.
+                    </p>
+</div>
+<div class="max-w-4xl mx-auto space-y-0">
+<div class="grid grid-cols-1 md:grid-cols-3 items-center py-10 border-y border-[#C9A84C]/20">
+<div class="flex items-center gap-6 px-4 py-4 md:py-0">
+<span class="material-symbols-outlined text-[#C9A84C] text-3xl">texture</span>
+<div>
+<h4 class="font-headline text-lg">200gsm Cotton Stock</h4>
+<p class="text-xs text-[#F5F0E8]/60 uppercase tracking-wider mt-1">Tactile &amp; Archival</p>
+</div>
+</div>
+<div class="flex items-center gap-6 px-4 py-4 md:py-0 border-y md:border-y-0 md:border-x border-[#C9A84C]/20">
+<span class="material-symbols-outlined text-[#C9A84C] text-3xl">public</span>
+<div>
+<h4 class="font-headline text-lg">Printed Near You</h4>
+<p class="text-xs text-[#F5F0E8]/60 uppercase tracking-wider mt-1">Fast &amp; Sustainable</p>
+</div>
+</div>
+<div class="flex items-center gap-6 px-4 py-4 md:py-0">
+<span class="material-symbols-outlined text-[#C9A84C] text-3xl">mark_as_unread</span>
+<div>
+<h4 class="font-headline text-lg">Mailed Direct</h4>
+<p class="text-xs text-[#F5F0E8]/60 uppercase tracking-wider mt-1">We Handle Everything</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filters -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+<div class="space-y-4">
+<h2 class="font-headline text-4xl text-primary">Explore Templates</h2>
+<div class="h-1 w-12 bg-secondary"></div>
+</div>
+<div class="flex flex-wrap gap-2 overflow-x-auto pb-2">
+<button class="px-6 py-2 bg-primary text-on-primary font-label text-[10px] uppercase tracking-widest">All</button>
+<button class="px-6 py-2 text-on-surface/60 font-label text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Holiday</button>
+<button class="px-6 py-2 text-on-surface/60 font-label text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Christmas</button>
+<button class="px-6 py-2 text-on-surface/60 font-label text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Hanukkah</button>
+<button class="px-6 py-2 text-on-surface/60 font-label text-[10px] uppercase tracking-widest hover:text-primary transition-colors">New Year</button>
+</div>
+</div>
+<!-- Template Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="group">
+<div class="aspect-[3/4] bg-surface-container-lowest mb-6 overflow-hidden relative">
+<img alt="Nordic style holiday card with minimalist trees" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_cV-zK5lQxN_Wc_ZXlMiqPRTmPDCKx4r9FpnN6RGsmrGFAI3fHKd4QM9P3AW98IQM7UxRVyx2Gw0u-WtqufPTxqee01YnN9a_QIfiW4sJaGmz7iKmvU3eQSGMaAxpnp3cozg-TeNOkanJ5EuSq0y_y8khIL2rwuG32A9OCGN-D6ftilmFVCryAnT-13ComSIT8aQ8rwbDuexHv2YMAgaIvcBCyEYJ8T18OlSxUQOiNs_KyMuQjqNMB9gGMqCYJIwEIUmPdPUhImUM"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<h3 class="font-headline text-xl text-primary">Nordic Nights</h3>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface/40 mt-1">Minimalist • Forest</p>
+</div>
+<button class="text-secondary font-label text-[10px] uppercase tracking-widest font-bold border-b border-secondary pb-1 hover:text-primary hover:border-primary transition-all">Customize</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group">
+<div class="aspect-[3/4] bg-surface-container-lowest mb-6 overflow-hidden relative">
+<img alt="Golden glow luxury holiday card template" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY4kv5HuTFVG_REBwSjLrABOIC1hR5R0beI2lYJxkx-JC7o0LG0z3jsRz69sPf7jYjKpA7l-P-VsH6EUcDWfc_1AhtBsbPGHMftLLyxK4BbJ-KZ0jDv_5pGfj5J1GF-Sv9tUXABzkCTXh61-QY9JH2qD9rHXC50H5JHSCvworJOy4SK9afhoeUdC0liVO0LE1pa_F6Ay63SUwYac-lp3sndRlm56qSBljODgF_lz4Rwz6wOIY5zi9Gbpl-pT9VyNNPgzuvdLFEYxps"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<h3 class="font-headline text-xl text-primary">Golden Glow</h3>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface/40 mt-1">Luxury • Foil</p>
+</div>
+<button class="text-secondary font-label text-[10px] uppercase tracking-widest font-bold border-b border-secondary pb-1 hover:text-primary hover:border-primary transition-all">Customize</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group">
+<div class="aspect-[3/4] bg-surface-container-lowest mb-6 overflow-hidden relative">
+<img alt="Traditional winter village holiday card" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsEeveBv_VeNy7Uw-Z2TdA18nz1PEKB72O0ZIejU96bektuqTkNVGlzngYvo-ClkrtQkHMcshOHWF_ouEkOp4b_vq9B7yBFT0qsbBZtY9yYNPimhmEp0QfhKdTTX9CvZOMThBtWfRMgXAmsJFNvKeCGG6iB00ya3wrwaNKe7f_GtIa_uk7t4-G9_TLRidu5XZxThRKtvJtrfJCKUA5ToRvuc6BQTZhb1dEdY8Aj8Nz50v33EYys76phZ_6OU-PFcWRckxGokaTre5E"/>
+<div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-center">
+<div>
+<h3 class="font-headline text-xl text-primary">Winter Village</h3>
+<p class="text-[10px] font-label uppercase tracking-widest text-on-surface/40 mt-1">Traditional • Cozy</p>
+</div>
+<button class="text-secondary font-label text-[10px] uppercase tracking-widest font-bold border-b border-secondary pb-1 hover:text-primary hover:border-primary transition-all">Customize</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works Section -->
+<section class="py-32 bg-primary-container text-on-primary">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-24 space-y-4">
+<span class="font-label text-[10px] uppercase tracking-[0.5em] text-on-primary-container font-bold">The Process</span>
+<h2 class="font-headline text-5xl italic">Simple. Seamless. Singular.</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-16 relative">
+<!-- Step 1 -->
+<div class="relative group">
+<div class="text-8xl font-headline italic text-on-primary-container/20 absolute -top-12 -left-4">01</div>
+<div class="relative z-10 pt-12 space-y-6">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container rounded-full">
+<span class="material-symbols-outlined text-primary text-xl">palette</span>
+</div>
+<h3 class="font-headline text-2xl">Pick a template</h3>
+<p class="text-on-primary-container leading-relaxed">
+                                Start with one of our designer-crafted holiday layouts. Each one is built to frame your story perfectly.
+                            </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative group">
+<div class="text-8xl font-headline italic text-on-primary-container/20 absolute -top-12 -left-4">02</div>
+<div class="relative z-10 pt-12 space-y-6">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container rounded-full">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+</div>
+<h3 class="font-headline text-2xl">Generate your AI image</h3>
+<p class="text-on-primary-container leading-relaxed">
+                                Use our built-in AI tool to create a one-of-a-kind art piece for your card. From oil paintings to modernist sketches.
+                            </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative group">
+<div class="text-8xl font-headline italic text-on-primary-container/20 absolute -top-12 -left-4">03</div>
+<div class="relative z-10 pt-12 space-y-6">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container rounded-full">
+<span class="material-symbols-outlined text-primary text-xl">local_post_office</span>
+</div>
+<h3 class="font-headline text-2xl">We print &amp; mail it</h3>
+<p class="text-on-primary-container leading-relaxed">
+                                We use premium heavy cardstock and high-quality inks, and we handle all the mailing for you. Truly hands-off elegance.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 bg-surface overflow-hidden">
+<div class="max-w-5xl mx-auto px-8 bg-surface-container-low py-20 relative text-center">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 -mr-16 -mt-16 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-8 max-w-2xl mx-auto">
+<h2 class="font-headline text-4xl text-primary">Ready to create your heirloom?</h2>
+<p class="text-on-surface-variant">The most beautiful cards your family has ever received are just a few clicks away.</p>
+<button class="bg-primary text-on-primary px-12 py-5 font-label text-xs uppercase tracking-[0.3em] font-bold shadow-xl hover:translate-y-[-2px] transition-all">
+                        Get Started Now
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#1b3022] dark:bg-[#061b0e] border-t border-[#fcf9f3]/10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-2 md:col-span-1 space-y-6">
+<div class="text-xl font-serif text-[#d4af37]">Personal Prints</div>
+<p class="text-[#fcf9f3]/60 font-sans text-sm uppercase tracking-widest leading-loose">
+                    © 2024 Personal Prints. <br/> Crafted with care.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-serif italic text-[#fcf9f3] text-lg">Shop</h4>
+<ul class="space-y-3">
+<li><a class="text-[#fcf9f3]/60 font-sans text-xs uppercase tracking-widest hover:text-[#d4af37] transition-colors" href="#">Holiday Cards</a></li>
+<li><a class="text-[#fcf9f3]/60 font-sans text-xs uppercase tracking-widest hover:text-[#d4af37] transition-colors" href="#">New Year</a></li>
+<li><a class="text-[#fcf9f3]/60 font-sans text-xs uppercase tracking-widest hover:text-[#d4af37] transition-colors" href="#">Custom Prints</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-serif italic text-[#fcf9f3] text-lg">Company</h4>
+<ul class="space-y-3">
+<li><a class="text-[#fcf9f3]/60 font-sans text-xs uppercase tracking-widest hover:text-[#d4af37] transition-colors" href="#">Our Story</a></li>
+<li><a class="text-[#fcf9f3]/60 font-sans text-xs uppercase tracking-widest hover:text-[#d4af37] transition-colors" href="#">Support</a></li>
+<li><a class="text-[#fcf9f3]/60 font-sans text-xs uppercase tracking-widest hover:text-[#d4af37] transition-colors" href="#">Privacy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-serif italic text-[#fcf9f3] text-lg">Follow</h4>
+<div class="flex gap-4">
+<a class="text-[#fcf9f3]/60 hover:text-[#d4af37] transition-colors focus:ring-1 focus:ring-[#d4af37] p-1" href="#">
+<span class="material-symbols-outlined" data-icon="instagram">camera</span>
+</a>
+<a class="text-[#fcf9f3]/60 hover:text-[#d4af37] transition-colors focus:ring-1 focus:ring-[#d4af37] p-1" href="#">
+<span class="material-symbols-outlined" data-icon="pinterest">pin_drop</span>
+</a>
+<a class="text-[#fcf9f3]/60 hover:text-[#d4af37] transition-colors focus:ring-1 focus:ring-[#d4af37] p-1" href="#">
+<span class="material-symbols-outlined" data-icon="twitter">share</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

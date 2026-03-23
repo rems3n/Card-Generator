@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personal Prints | User Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-headline { font-family: 'Noto Serif', serif; }
+        .sans-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Ambient Shadow Implementation */
+        .ambient-shadow {
+            box-shadow: 0 20px 40px -10px rgba(28, 28, 24, 0.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#1b3022",
+                        "on-tertiary-container": "#ff5945",
+                        "on-surface-variant": "#434843",
+                        "secondary": "#735c00",
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary-fixed": "#ffe088",
+                        "on-primary-fixed-variant": "#364c3c",
+                        "on-primary-fixed": "#0b2013",
+                        "surface-dim": "#dcdad4",
+                        "surface-container-high": "#ebe8e2",
+                        "surface-tint": "#4d6453",
+                        "on-tertiary-fixed": "#410000",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "tertiary": "#380000",
+                        "on-secondary-container": "#745c00",
+                        "tertiary-fixed": "#ffdad4",
+                        "surface-bright": "#fcf9f3",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#31312d",
+                        "surface-container": "#f0eee8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f3f0ea",
+                        "background": "#fcf9f3",
+                        "on-background": "#1c1c18",
+                        "surface-variant": "#e5e2dc",
+                        "on-tertiary-fixed-variant": "#930100",
+                        "primary": "#061b0e",
+                        "on-surface": "#1c1c18",
+                        "tertiary-container": "#5f0000",
+                        "primary-fixed": "#d0e9d4",
+                        "secondary-container": "#fed65b",
+                        "on-primary-container": "#819986",
+                        "surface-container-highest": "#e5e2dc",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#574500",
+                        "surface": "#fcf9f3",
+                        "primary-fixed-dim": "#b4cdb8",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f6f3ed",
+                        "outline-variant": "#c3c8c1",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "outline": "#737973",
+                        "inverse-primary": "#b4cdb8",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error-container": "#93000a"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+<!-- Layout Wrapper -->
+<div class="flex min-h-screen">
+<!-- SideNavBar Component -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-6 space-y-8 bg-[#fcf9f3] dark:bg-stone-900 h-screen w-64 border-r border-stone-100 dark:border-stone-800 z-40">
+<div class="mb-4">
+<span class="text-xl font-headline italic text-primary-container">Personal Prints</span>
+</div>
+<!-- Profile Header -->
+<div class="flex flex-col gap-2">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high mb-2">
+<img alt="User profile portrait" class="w-full h-full object-cover" data-alt="Close-up portrait of a stylish man with a warm smile, professional lighting, editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDki7ZODaD9pq89On4K0Xiy0fqzK__xtLic4--NdWJlWnoEdyh0vi3Uvs3KnCtUrYDTIRcuSUEwCfm1yWdA0TUTbieW7LQNGOU_wK8pVisiULjn4QLmdHNzRHb24qD_ZajorX1mh0_kyeHFJa2XDmCI0pyLNZ0E0DLVeOLglimGl0XwBMdU-MEnmMZr4M7wFxQj6VPIQyPYIo49qFt2o_k8gbcCzvqzGcWDoALXKTQC9tF24ulz8yNYV-sNTiojBfi5iqvlVcSBMhgv"/>
+</div>
+<div>
+<h2 class="font-headline text-lg text-primary-container">Welcome back, Julian</h2>
+<p class="text-xs font-label uppercase tracking-widest text-stone-500">Premium Member since 2021</p>
+</div>
+</div>
+<!-- Navigation Items -->
+<nav class="flex flex-col gap-1">
+<!-- Active Item: Overview -->
+<a class="flex items-center gap-3 text-primary-container dark:text-[#fcf9f3] font-semibold bg-primary-container/5 dark:bg-[#c4a24d]/10 rounded-lg px-4 py-3 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm">Overview</span>
+</a>
+<a class="flex items-center gap-3 text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 px-4 py-3 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="text-sm">Orders</span>
+</a>
+<a class="flex items-center gap-3 text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 px-4 py-3 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="text-sm">Addresses</span>
+</a>
+<a class="flex items-center gap-3 text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 px-4 py-3 rounded-lg transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-sm">Payment Methods</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full bg-primary-container text-on-primary py-3 rounded-lg font-label text-sm uppercase tracking-widest hover:opacity-90 transition-opacity">
+                    Create New Card
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 p-12 max-w-7xl">
+<!-- Top Bar Section -->
+<header class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label text-xs uppercase tracking-[0.3em] text-stone-500 mb-2 block">Personal Dashboard</span>
+<h1 class="text-5xl font-headline text-primary-container leading-tight">My Account</h1>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-secondary-container text-on-secondary-container rounded font-medium text-sm transition-all hover:brightness-95 active:scale-95">
+                        Start New Design
+                    </button>
+</div>
+</header>
+<!-- Grid Layout -->
+<div class="grid grid-cols-12 gap-10">
+<!-- Left Column: Active Orders & History -->
+<div class="col-span-8 space-y-16">
+<!-- Section: Active Orders -->
+<section>
+<div class="flex items-baseline justify-between mb-8">
+<h3 class="text-2xl font-headline text-primary-container">Active Orders</h3>
+<a class="text-xs font-label uppercase tracking-widest text-secondary hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<!-- Card 1: Physical Print -->
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow group relative overflow-hidden transition-all hover:translate-y-[-4px]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-24 h-32 bg-surface-container-low rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Elegant cream greeting card with botanical gold foil print on a textured paper surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrNSVPYm2jpIFjiFFECpo0LxD7Hdxgl5zY72YLgLolzUtI2gZnxHGK81ZXWlyPwU11FuH10uoyrOn0HAqjqdR9AlTMIr7t670-IIwjwyO31VVdJX6yq4xdUa_pBhRrFaCBWQwLi1FfLCw_oFWjLkW_8w8yW2cW5GfzOm1CvmoekEOqzJ5_7NDZjTX0o47imtqeSq-uoDouq9dQ5hOzfpMCbQ-T63l6X--VFlX8JgQ70WuqPnidvk9lvkZT5sEwEtPzfW0bjJSc1ogu"/>
+</div>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-[10px] font-bold uppercase tracking-widest rounded-full">Printing</span>
+</div>
+<h4 class="font-headline text-lg mb-1">Physical Print</h4>
+<p class="text-sm text-stone-500 mb-4">Botanical Collection • #PP-9281</p>
+<div class="flex items-center gap-2 text-primary-container text-xs font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="local_shipping">local_shipping</span>
+                                    Est. Delivery: Nov 14
+                                </div>
+</div>
+<!-- Card 2: Digital E-Card -->
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow group relative overflow-hidden transition-all hover:translate-y-[-4px]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-24 h-32 bg-surface-container-low rounded overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Vibrant digital holiday card design with modern festive typography and soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHUIiwT2mmnvlScsUQi1q0dGsIC3VgAjNzocpmDDT2YwsA3bmDwyeUkCZF50hg06dcHGarKR_-mfQXtbeLQi6GKtOOkKVtqg1s0zXAiJr2xtQpDCykPsiYm67NoIxkjqFiRKRyTLNznCnx_gJlCe6k23_WGHLmWfDNvcI45evcqUjS-WTi7RvwTdz4GlW82NF4hsh2WuaeloKnXWHDN284e_SJ7m4_K70q1bGJ6-Kb2rVzx6aB1XBsUdMcotnlR8JEiOhhmDZSW8th"/>
+</div>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold uppercase tracking-widest rounded-full">Scheduled</span>
+</div>
+<h4 class="font-headline text-lg mb-1">Digital E-Card</h4>
+<p class="text-sm text-stone-500 mb-4">Holiday Series • #PP-9304</p>
+<div class="flex items-center gap-2 text-primary-container text-xs font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                                    Sending: Dec 24, 9:00 AM
+                                </div>
+</div>
+</div>
+</section>
+<!-- Section: Order History -->
+<section>
+<h3 class="text-2xl font-headline text-primary-container mb-8">Order History</h3>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead class="bg-surface-container-high/50 border-b border-outline-variant/10">
+<tr>
+<th class="px-8 py-4 text-[10px] font-label uppercase tracking-widest text-stone-500">Date</th>
+<th class="px-8 py-4 text-[10px] font-label uppercase tracking-widest text-stone-500">Order #</th>
+<th class="px-8 py-4 text-[10px] font-label uppercase tracking-widest text-stone-500">Total</th>
+<th class="px-8 py-4 text-[10px] font-label uppercase tracking-widest text-stone-500 text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-8 py-6 text-sm">Oct 12, 2023</td>
+<td class="px-8 py-6 text-sm font-medium">#PP-8821</td>
+<td class="px-8 py-6 text-sm font-headline">$42.00</td>
+<td class="px-8 py-6 text-right">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary-container">Delivered</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-8 py-6 text-sm">Sep 28, 2023</td>
+<td class="px-8 py-6 text-sm font-medium">#PP-8750</td>
+<td class="px-8 py-6 text-sm font-headline">$115.50</td>
+<td class="px-8 py-6 text-right">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary-container">Delivered</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="px-8 py-6 text-sm">Aug 15, 2023</td>
+<td class="px-8 py-6 text-sm font-medium">#PP-8604</td>
+<td class="px-8 py-6 text-sm font-headline">$28.00</td>
+<td class="px-8 py-6 text-right">
+<span class="text-[10px] font-bold uppercase tracking-widest text-stone-400">Sent</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Right Column: Payment & Quick Actions -->
+<div class="col-span-4 space-y-16">
+<!-- Section: Payment Methods -->
+<section>
+<h3 class="text-xl font-headline text-primary-container mb-6">Payment Methods</h3>
+<div class="space-y-4">
+<!-- Existing Card -->
+<div class="bg-surface-container-lowest p-6 rounded-lg ambient-shadow flex items-center gap-4">
+<div class="w-12 h-8 bg-stone-100 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-stone-400" data-icon="credit_card">credit_card</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-semibold">Visa ending in 4242</p>
+<p class="text-xs text-stone-500 uppercase tracking-widest">Expires 12/26</p>
+</div>
+<button class="text-stone-400 hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+<!-- Add New Option -->
+<button class="w-full flex items-center justify-center gap-2 py-4 border border-dashed border-outline-variant rounded-lg text-stone-500 hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span class="text-xs font-label uppercase tracking-widest">Add New Method</span>
+</button>
+</div>
+</section>
+<!-- Section: Quick Actions -->
+<section class="bg-primary-container text-on-primary p-8 rounded-lg relative overflow-hidden">
+<!-- Subtle Background Texture -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+<h3 class="text-xl font-headline mb-8 relative z-10 text-white">Quick Actions</h3>
+<nav class="space-y-4 relative z-10">
+<a class="flex items-center justify-between group py-2 border-b border-on-primary-container/20" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-sm font-label uppercase tracking-widest text-white/90">Refer a Friend</span>
+</div>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between group py-2 border-b border-on-primary-container/20" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="settings">settings</span>
+<span class="text-sm font-label uppercase tracking-widest text-white/90">Account Settings</span>
+</div>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between group py-2" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="help_outline">help_outline</span>
+<span class="text-sm font-label uppercase tracking-widest text-white/90">Support Atelier</span>
+</div>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</nav>
+<div class="mt-8 pt-8 border-t border-on-primary-container/20">
+<p class="text-xs italic text-on-primary-container leading-relaxed">"Every print tells a story. Thank you for choosing us to be part of yours."</p>
+</div>
+</section>
+<!-- Promotional Banner -->
+<div class="relative rounded-lg overflow-hidden h-48 group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Collection of beautifully arranged handcrafted cards on a wooden table with soft warm natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5S66OsbrfMqmImiHqlnjYzsShuve2r-SaURFSJspxB2vbmJK3fOu6MUqQJbadzPtXvOZXW-biuzJWIZiwcCiiJOPyLeHao07ESb8wa7HdxL43GcjnlQniM3L7dG5Yhr1Net2sfZP7PeDrKsSmfQ-SDYY0XvETlWon1MsfK5AJOzx74C9qC0SZp8WPeAPzVBtBJj7JzfIlID1izn_DMYxcg_5VjkK-93YJJrH5JzB6jUgFYiVnHmcrKNWlUYbtw5YoIOQr0h6MFba"/>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px] flex flex-col justify-center p-6">
+<h4 class="text-white font-headline text-lg mb-2">Winter Collection</h4>
+<p class="text-white/80 text-xs mb-4">Explore the new 2024 designs.</p>
+<button class="w-max text-[10px] font-label uppercase tracking-widest text-white border border-white/40 px-4 py-2 hover:bg-white hover:text-primary transition-colors">
+                                Shop Now
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
