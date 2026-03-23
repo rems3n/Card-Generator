@@ -60,10 +60,20 @@
   --color-on-surface: var(--on-surface);
   --color-on-surface-variant: var(--on-surface-variant);
   --color-outline-variant: var(--outline-variant);
+  --color-outline: var(--outline);
+
+  /* Extended palette */
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-variant: var(--surface-variant);
 
   /* Ambient shadows (no standard drop shadows per design system) */
   --shadow-ambient: 0 8px 40px rgba(28, 28, 24, 0.04);
   --shadow-ambient-md: 0 12px 40px rgba(28, 28, 24, 0.06);
+  --shadow-editorial: 0 40px 80px -20px rgba(28, 28, 24, 0.06);
 }
 
 :root {
@@ -79,16 +89,23 @@
   --surface-container-high: #ebe7df;
   --surface-container-highest: #e5e1d9;
   --on-surface: #1c1c18;
-  --on-surface-variant: #46483e;
-  --outline-variant: #c7c7b8;
+  --on-surface-variant: #434843;
+  --outline-variant: #c3c8c1;
+  --outline: #737973;
+  --surface-dim: #dcdad4;
+  --surface-variant: #e5e2dc;
 
   /* Primary — Deep Forest Green */
-  --primary: #1B3022;
+  --primary: #061b0e;
   --primary-foreground: #ffffff;
+  --primary-container: #1b3022;
+  --on-primary-container: #819986;
 
   /* Secondary — Gilded Gold */
-  --secondary: #D4AF37;
+  --secondary: #735c00;
   --secondary-foreground: #1c1c18;
+  --secondary-container: #fed65b;
+  --on-secondary-container: #745c00;
 
   /* Tertiary — Holiday Red (accent only) */
   --destructive: #FF0000;
