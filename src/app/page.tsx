@@ -1,64 +1,94 @@
-import Image from "next/image";
+import { BrandLogo, DisplayText, LabelText } from "@/components/ui";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="flex flex-col flex-1">
+      {/* Navigation */}
+      <nav className="flex items-center justify-between px-8 py-6 bg-surface-container-low/80 backdrop-blur-[16px] sticky top-0 z-50">
+        <BrandLogo size="md" />
+        <div className="flex items-center gap-6">
+          <Button variant="ghost">Browse Cards</Button>
+          <Button variant="ghost">How It Works</Button>
+          <Button>Get Started</Button>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <main className="flex flex-1 flex-col">
+        <section className="flex flex-col items-start justify-center px-8 md:px-16 py-[7rem] bg-background max-w-5xl mx-auto w-full">
+          <LabelText size="md" className="text-on-surface-variant mb-6">
+            AI-Powered Personalization
+          </LabelText>
+          <DisplayText size="lg" className="text-primary max-w-2xl mb-8">
+            Cards as unique as the people you love.
+          </DisplayText>
+          <p className="text-lg leading-8 text-on-surface-variant max-w-md mb-12 font-sans tracking-[0.009em]">
+            Design one-of-a-kind greeting cards and stationery with our
+            intelligent customization tools. Every detail, crafted with
+            intention.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <div className="flex gap-4">
+            <Button size="lg" className="bg-primary text-primary-foreground">
+              Start Creating
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="bg-secondary/10 text-secondary-foreground"
+            >
+              View Gallery
+            </Button>
+          </div>
+        </section>
+
+        {/* Feature Section */}
+        <section className="bg-surface-container-low py-[5.5rem] px-8 md:px-16">
+          <div className="max-w-5xl mx-auto">
+            <LabelText size="md" className="text-on-surface-variant mb-4 block">
+              The Experience
+            </LabelText>
+            <DisplayText
+              as="h2"
+              size="sm"
+              className="text-primary max-w-lg mb-16"
+            >
+              A digital atelier for your most personal moments.
+            </DisplayText>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {[
+                {
+                  title: "Choose Your Canvas",
+                  description:
+                    "Select from curated card formats—folded, flat, or postcard—each sized for real-world printing.",
+                },
+                {
+                  title: "Design with AI",
+                  description:
+                    "Describe your vision and watch it come to life. Our AI understands style, tone, and occasion.",
+                },
+                {
+                  title: "Print & Send",
+                  description:
+                    "Premium cotton cardstock, hand-finished edges. Shipped directly or download for local printing.",
+                },
+              ].map((feature) => (
+                <div
+                  key={feature.title}
+                  className="bg-surface-container-lowest p-8 rounded-[0.25rem]"
+                >
+                  <h3 className="font-heading text-xl font-normal text-on-surface mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm leading-6 text-on-surface-variant tracking-[0.016em]">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
